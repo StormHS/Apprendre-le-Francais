@@ -6,19 +6,43 @@ exports.seed = function (knex) {
         {
           id: 1,
           french: 'Bonjour, je suis enchantee de vous recontrer!',
-          english: 'Good morning, Nice to meet you!',
+          english: 'Good morning, Nice to meet you! (formal)',
         },
         {
           id: 2,
-          french: 'Peut-etre voulez-vous regarder un film',
+          french: 'Peut-être voulez-vous regarder un film',
           english: 'Maybe we could watch a movie?',
         },
-        { id: 3, french: 'feijoa', english: 'Hi!' },
-        { id: 4, french: 'Salut!', english: 'Hi!' },
-        { id: 5, french: 'banana', english: 'Hi!' },
-        { id: 6, french: 'feijoa', english: 'Hi!' },
-        { id: 7, french: 'banana', english: 'Hi!' },
-        { id: 8, french: 'feijoa', english: 'Hi!' },
+        {
+          id: 3,
+          french: 'Tu veux un thé ou un café?',
+          english: 'Would you like a tea or a coffe?',
+        },
+        {
+          id: 4,
+          french: 'Ç est ce que?',
+          english: 'Whats that?',
+        },
+        {
+          id: 5,
+          french: 'je n ai pa faim, merci',
+          english: 'I am not hungry, thanks',
+        },
+        {
+          id: 6,
+          french: 'Je vais bien, merci',
+          english: 'I am good, thank you',
+        },
+        {
+          id: 7,
+          french: 'En fait...',
+          english: 'In fact...',
+        },
+        {
+          id: 8,
+          french: 'Comment allez vous?',
+          english: 'How are you? (formal)',
+        },
       ])
     })
 }

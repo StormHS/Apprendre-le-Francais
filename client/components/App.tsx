@@ -6,12 +6,13 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Translations!</h1>
+        <h1>Apprendre le Francais</h1>
         <ul>
           {data &&
             data.map((translation) => (
               <li key={translation.id}>
-                {translation.french} {translation.english}
+                {translation.french}
+                {translation.english}
               </li>
             ))}
         </ul>
