@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Apprendre le Francais</h1>
+        <h1>Apprendre le Français</h1>
         <ul>
           {data &&
             data.map((translation) => (
