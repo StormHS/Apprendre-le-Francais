@@ -1,13 +1,20 @@
-import { useFruits } from '../hooks/useFruits'
+import { useTranslations } from '../hooks/useTranslations'
 
 function App() {
-  const { data } = useFruits()
+  const { data } = useTranslations()
 
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
+        <h1>Fullstack Boilerplate - with Translations!</h1>
+        <ul>
+          {data &&
+            data.map((translation) => (
+              <li key={translation.id}>
+                {translation.french} {translation.english}
+              </li>
+            ))}
+        </ul>
       </div>
     </>
   )
