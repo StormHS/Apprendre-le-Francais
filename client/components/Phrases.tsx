@@ -22,7 +22,7 @@ function Phrases() {
         </ul>
         <div>
           <Link to="/">
-            <p className="home-button">Maison</p>
+            <button className="home-button">Maison</button>
           </Link>
         </div>
       </div>
