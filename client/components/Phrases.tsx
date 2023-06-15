@@ -1,19 +1,21 @@
 import { useTranslations } from '../hooks/useTranslations'
+import Card from './Card'
 
-function App() {
+function Phrases() {
   const { data } = useTranslations()
 
   return (
     <>
       <div className="app">
-        <h1>Apprendre le Français</h1>
+        <h1>Français 101</h1>
         <ul>
           {data &&
             data.map((translation) => (
-              <li key={translation.id}>
-                {translation.french}
-                {translation.english}
-              </li>
+              <Card
+                key={translation.id}
+                english={translation.english}
+                french={translation.french}
+              />
             ))}
         </ul>
       </div>
@@ -21,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default Phrases

@@ -10,6 +10,8 @@ const queryClient = new QueryClient()
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
     <QueryClientProvider client={queryClient}>
+      {/*  the below line to establish routes and have multiple pages on your
+      website */}
       <RouterProvider router={router} />
       <ReactQueryDevtools />
     </QueryClientProvider>
