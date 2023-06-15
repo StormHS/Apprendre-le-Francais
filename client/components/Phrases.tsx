@@ -1,5 +1,6 @@
 import { useTranslations } from '../hooks/useTranslations'
 import Card from './Card'
+import { Link } from 'react-router-dom'
 
 function Phrases() {
   const { data } = useTranslations()
@@ -8,6 +9,7 @@ function Phrases() {
     <>
       <div className="app">
         <h1>Français 101</h1>
+
         <ul>
           {data &&
             data.map((translation) => (
@@ -18,6 +20,11 @@ function Phrases() {
               />
             ))}
         </ul>
+        <div>
+          <Link to="/">
+            <p className="home-button">Maison</p>
+          </Link>
+        </div>
       </div>
     </>
   )

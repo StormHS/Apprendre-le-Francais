@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 interface Props {
   english: string
   french: string
 }
 
-function Card(props: Props) {
+export default function Card(props: Props) {
   console.log(props.english)
   console.log(props.french)
   const [clicked, setClicked] = useState(false)
@@ -16,7 +17,7 @@ function Card(props: Props) {
   }
   return (
     <>
-      <div className="card">
+      <div className="card-button">
         <button onClick={handleClicked}>
           {clicked ? props.english : props.french}
         </button>
@@ -24,5 +25,3 @@ function Card(props: Props) {
     </>
   )
 }
-
-export default Card
