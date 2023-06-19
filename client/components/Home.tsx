@@ -13,7 +13,7 @@ function Home() {
         Qu'est-ce que c'est (coming soon)
       </button>
       <button className="main-buttons">Journal Intime (coming soon)</button>
-      <button className="main-buttons">À propos (coming soon)</button>
+      <button className="about-button">À propos</button>
     </>
   )
 }
