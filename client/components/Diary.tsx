@@ -17,8 +17,8 @@ function Diary() {
             Français:
             <input
               type="text"
-              name="French-entry"
-              id="French-entry"
+              name="frenchEntry"
+              id="frenchEntry"
               value={text}
             />
           </label>
@@ -26,8 +26,8 @@ function Diary() {
             Anglaise:
             <input
               type="text"
-              name="English-entry"
-              id="English-entry"
+              name="englishEntry"
+              id="englishEntry"
               value={text}
               onChange={(handleChange) => {}}
             />
