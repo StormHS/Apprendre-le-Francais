@@ -9,11 +9,15 @@ function Home() {
       <Link to="/Francais101">
         <button className="main-buttons">Francais 101</button>
       </Link>
+      <Link to="/JournalIntime">
+        <button className="main-buttons">Journal Intime</button>
+      </Link>
       <button className="main-buttons">
         Qu'est-ce que c'est (coming soon)
       </button>
-      <button className="main-buttons">Journal Intime (coming soon)</button>
-      <button className="about-button">À propos</button>
+      <Link to="/Apropos">
+        <button className="about-button">À propos</button>
+      </Link>
     </>
   )
 }
