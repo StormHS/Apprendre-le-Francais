@@ -10,7 +10,7 @@ function Phrases() {
       <div className="app">
         <h1>Français 101</h1>
 
-        <ul>
+        <ul className="card-container">
           {data &&
             data.map((translation) => (
               <Card
@@ -20,8 +20,8 @@ function Phrases() {
               />
             ))}
         </ul>
-        <div>
-          <Link to="/">
+        <div style={{ width: '100%' }}>
+          <Link className="link-button" to="/">
             <button className="home-button">Maison</button>
           </Link>
         </div>
