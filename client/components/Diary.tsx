@@ -11,15 +11,14 @@ function Diary() {
       <div className="app">
         <h1>Journal Intime</h1>
       </div>
-
       <form action="/JournalIntime" method="get">
         <div className="input-boxes">
           <label>
             Français:
             <input
               type="text"
-              name="Fdiary-entry"
-              id="Fdiary-entry"
+              name="French-entry"
+              id="French-entry"
               value={text}
             />
           </label>
@@ -27,8 +26,8 @@ function Diary() {
             Anglaise:
             <input
               type="text"
-              name="Adiary-entry"
-              id="Adiary-entry"
+              name="English-entry"
+              id="English-entry"
               value={text}
               onChange={(handleChange) => {}}
             />
