@@ -1,19 +1,17 @@
 interface Props {
-    entries: string[]
+    translations: string[]
 }
 
-function Entries({ entries }: Props) {
+export default function Translation({ translations }: Props) {
     return (
         <section>
             <ul>
-                {entries.map((entry, i) => (
+                {translations.map((translation, i) => (
                     <li key{i}>
-                        <h3>{entry}</h3>
+                        <h3>{translations}</h3>
                     </li>
                 ))}
             </ul>
         </section>
     )
     }
-
-    export default Entries

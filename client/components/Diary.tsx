@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom'
 function Diary() {
   const [text, setText] = useState('')
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.value)
+    setText(event.target.value)
+  }
+
+  function handleSubmit(event: React.ChangeEvent<HTMLInputElement>) {
+    event.preventDefault()
+    console.log('submit', text)
   }
   return (
     <>
       <div className="app">
         <h1>Journal Intime</h1>
       </div>
-      <form action="/JournalIntime" method="get">
+      <form onSubmit={handleSubmit}>
         <div className="input-boxes">
           <label>
             Français:
@@ -20,6 +25,7 @@ function Diary() {
               name="frenchEntry"
               id="frenchEntry"
               value={text}
+              onChange={handleChange}
             />
           </label>
           <label>
@@ -29,7 +35,7 @@ function Diary() {
               name="englishEntry"
               id="englishEntry"
               value={text}
-              onChange={(handleChange) => {}}
+              onChange={handleChange}
             />
           </label>
           <button className="submit">Ajouter</button>
