@@ -2,14 +2,18 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Diary() {
-  const [text, setText] = useState('')
+  const [form, setForm] = useState({ english: '', french: '' })
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setText(event.target.value)
+    const { name, value } = event.target
+    const newForm = { ...form, [name]: value }
+    setForm(newForm)
   }
 
-  function handleSubmit(event: React.ChangeEvent<HTMLInputElement>) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    console.log('submit', text)
+    // below is where you will eventually sent it to the database
+    console.log('submit', form)
+    setForm({ english: '', french: '' })
   }
   return (
     <>
@@ -22,9 +26,9 @@ function Diary() {
             Français:
             <input
               type="text"
-              name="frenchEntry"
+              name="french"
               id="frenchEntry"
-              value={text}
+              value={form.french}
               onChange={handleChange}
             />
           </label>
@@ -32,9 +36,9 @@ function Diary() {
             Anglaise:
             <input
               type="text"
-              name="englishEntry"
+              name="english"
               id="englishEntry"
-              value={text}
+              value={form.english}
               onChange={handleChange}
             />
           </label>
