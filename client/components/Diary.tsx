@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Entries from './Entries'
 
 function Diary() {
   const [form, setForm] = useState({ english: '', french: '' })
@@ -52,6 +53,7 @@ function Diary() {
           <button className="home-button">Maison</button>
         </Link>
       </div>
+      <Entries />
     </>
   )
 }

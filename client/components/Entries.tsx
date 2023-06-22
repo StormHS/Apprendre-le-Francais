@@ -1,17 +1,20 @@
+import { useTranslations } from '../hooks/useTranslations'
+
 interface Props {
-    translations: string[]
+  translations: string[]
 }
 
-export default function Translation({ translations }: Props) {
-    return (
-        <section>
-            <ul>
+export default function Entries({ translations }: Props) {
+  return (
+    <section>
+      Entries
+      {/* <ul>
                 {translations.map((translation, i) => (
                     <li key{i}>
                         <h3>{translations}</h3>
                     </li>
                 ))}
-            </ul>
-        </section>
-    )
-    }
+            </ul> */}
+    </section>
+  )
+}
