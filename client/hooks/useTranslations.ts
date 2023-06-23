@@ -14,7 +14,7 @@ export function useTranslations() {
   }
 }
 
-function useTranslationsMutation<TData = unknown, TVariables = unknown>(
+export function useTranslationsMutation<TData = unknown, TVariables = unknown>(
   mutationFn: MutationFunction<TData, TVariables>
 ) {
   const queryClient = useQueryClient()

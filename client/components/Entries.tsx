@@ -1,20 +1,25 @@
 import { useTranslations } from '../hooks/useTranslations'
 
-interface Props {
-  translations: string[]
-}
-
-export default function Entries({ translations }: Props) {
+export default function Entries() {
+  const translations = useTranslations()
+  if (translations.isLoading) {
+    return <p>loading...</p>
+  }
+  if (translations.isError) {
+    return <p>oh merde</p>
+  }
   return (
     <section>
-      Entries
-      {/* <ul>
-                {translations.map((translation, i) => (
-                    <li key{i}>
-                        <h3>{translations}</h3>
-                    </li>
-                ))}
-            </ul> */}
+      List of data goes here
+      <ul>
+        {translations.data.map((translation, i) => (
+          <li key={translation.id}>
+            <p>
+              {translation.english} {translation.french}
+            </p>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

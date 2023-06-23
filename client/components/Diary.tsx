@@ -1,19 +1,24 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Entries from './Entries'
+import { addTranslation } from '../apis/translations'
+import { useMutation } from '@tanstack/react-query'
+import { useTranslationsMutation } from '../hooks/useTranslations'
 
 function Diary() {
   const [form, setForm] = useState({ english: '', french: '' })
+  const mutation = useTranslationsMutation(addTranslation)
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target
     const newForm = { ...form, [name]: value }
     setForm(newForm)
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     // below is where you will eventually sent it to the database
     console.log('submit', form)
+    mutation.mutate(form)
     setForm({ english: '', french: '' })
   }
   return (
@@ -44,6 +49,8 @@ function Diary() {
             />
           </label>
           <button className="submit">Ajouter</button>
+          {/* {mutation.isSuccess ? <p>tres bien!</p> : null} */}
+          {/* // can do the above for is loading or is error */}
         </div>
         <div></div>
       </form>

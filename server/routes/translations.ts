@@ -9,7 +9,6 @@ const router = Router()
 router.get('/', async (req, res) => {
   try {
     const translations = await db.getAllTranslations()
-
     res.json(translations)
   } catch (error) {
     console.log(error)
