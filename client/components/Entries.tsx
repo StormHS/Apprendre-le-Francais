@@ -10,13 +10,12 @@ export default function Entries() {
   }
   return (
     <section>
-      List of data goes here
+      <h3>Vos Entrées</h3>
       <ul>
         {translations.data.map((translation, i) => (
           <li key={translation.id}>
-            <p>
-              {translation.english} {translation.french}
-            </p>
+            <p>{translation.english}</p>
+            <p>{translation.french}</p>
           </li>
         ))}
       </ul>
