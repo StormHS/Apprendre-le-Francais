@@ -32,4 +32,16 @@ router.post('/', async (req, res) => {
   }
 })
 
+// trying to figure out how to add a delete button to my database
+router.delete('/:id', async (req, res) => {
+  try {
+    const translationId = Number(req.params.id)
+    await db.deleteTranslation(translationId)
+    res.sendStatus(204)
+  } catch (error) {
+    console.log(error)
+    res.status(500)
+  }
+})
+
 export default router

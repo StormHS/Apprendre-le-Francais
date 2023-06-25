@@ -14,6 +14,7 @@ export function useTranslations() {
   }
 }
 
+// the t before the data and variables is saying whatever is put in to the function will be worked so you dont have to have one for delete and one for edd etc.
 export function useTranslationsMutation<TData = unknown, TVariables = unknown>(
   mutationFn: MutationFunction<TData, TVariables>
 ) {
@@ -27,7 +28,15 @@ export function useTranslationsMutation<TData = unknown, TVariables = unknown>(
   return mutation
 }
 
-// Query functions go here e.g. useAddTranslation
-/* function useAddTranslation() {
-  return useTranslationsMutation(addTranslation)
-} */
+// the below is a breakdown of what each hook funciton would be like if you hadnt done the above which takes in any variable.
+/// const useDeleteMutation = useMutation(deleteTranslationApi, {
+// onSuccess: () => {
+// queryClient.invalidateQueries({ queryKey: ['translations'] })
+// },
+// })
+
+/// const useAddMutation = useMutation(addTranlation, {
+// onSuccess: () => {
+// queryClient.invalidateQueries({ queryKey: ['translations'] })
+// },
+// })

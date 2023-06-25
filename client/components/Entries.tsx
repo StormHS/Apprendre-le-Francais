@@ -1,4 +1,5 @@
 import { useTranslations } from '../hooks/useTranslations'
+import Delete from './Delete'
 
 export default function Entries() {
   const translations = useTranslations()
@@ -14,8 +15,10 @@ export default function Entries() {
       <ul>
         {translations.data.map((translation, i) => (
           <li key={translation.id}>
-            <p>{translation.english}</p>
-            <p>{translation.french}</p>
+            <p className="entries">{translation.english}</p>
+            <p className="entries">{translation.french}</p>
+            {/* // the below grabs out delete button function from Delete.tsx and is identifying which translation we are deleting */}
+            <Delete id={translation.id} />
           </li>
         ))}
       </ul>
