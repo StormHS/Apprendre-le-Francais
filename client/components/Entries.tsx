@@ -19,6 +19,7 @@ export default function Entries() {
             <p className="entries">{translation.french}</p>
             {/* // the below grabs out delete button function from Delete.tsx and is identifying which translation we are deleting */}
             <Delete id={translation.id} />
+            {/*  <button className="delete-button">edit button(Coming Soon - stretch)</button> */}
           </li>
         ))}
       </ul>
