@@ -15,8 +15,8 @@ export default function Entries() {
       <ul>
         {translations.data.map((translation, i) => (
           <li key={translation.id}>
-            <p className="entries">{translation.english}</p>
             <p className="entries">{translation.french}</p>
+            <p className="entries">{translation.english}</p>
             {/* // the below grabs out delete button function from Delete.tsx and is identifying which translation we are deleting */}
             <Delete id={translation.id} />
             {/*  <button className="delete-button">edit button(Coming Soon - stretch)</button> */}
