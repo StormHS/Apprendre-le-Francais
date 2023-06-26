@@ -11,7 +11,7 @@ export default function Entries() {
   }
   return (
     <section>
-      <h3>Vos Entrées</h3>
+      <h2>Vos Entrées</h2>
       <ul>
         {translations.data.map((translation, i) => (
           <li key={translation.id}>
