@@ -40,7 +40,7 @@ router.delete('/:id', async (req, res) => {
     res.sendStatus(204)
   } catch (error) {
     console.log(error)
-    res.status(500)
+    res.sendStatus(500)
   }
 })
 

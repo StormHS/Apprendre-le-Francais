@@ -13,8 +13,11 @@ export default function DeleteTranslation(props: Props) {
     mutation.mutate(deleteId)
   }
   return (
-    <button className="delete-button" onClick={handleDelete}>
-      supprimer
-    </button>
+    <>
+      {mutation.isError && <div>error deleting</div>}
+      <button className="delete-button" onClick={handleDelete}>
+        supprimer
+      </button>
+    </>
   )
 }
