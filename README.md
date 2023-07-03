@@ -1,4 +1,3 @@
-# Boilerplate: Fullstack with Sass
 
 ## Setup
 
